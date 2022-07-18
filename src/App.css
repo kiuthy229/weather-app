@@ -1,0 +1,100 @@
+
+.search {
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+.search input {
+  position: absolute;
+  left:13%;
+  top:30%;
+  width: 30%;
+  height:40px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: inline;
+}
+.search-btn {
+  position:absolute;
+  top:31.5%;
+  left:44%;
+  width: 8%;
+  height:38px;
+  background: #6E85B7;
+  font-weight: 600;
+  font-size: 15px;
+  color: #C4D7E0;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.o-temperature{
+  font-size: 20px;
+  position: absolute;
+  top: 10%;
+  left: 73%;
+}
+.city-name{
+  font-size: 40px;
+  color: #898AA6;
+  position: absolute;
+  top:3%;
+  left:13%;
+  padding: 10px;
+}
+.main{
+  font-size: 20px;
+  color: #898AA6;
+  position: absolute;
+  top:17%;
+  left:13%;
+  padding: 10px;
+}
+.description{
+  font-size: 20px;
+  color: #898AA6;
+  position: absolute;
+  top:22%;
+  left:13%;
+  padding: 10px;
+}
+.temperature{
+  font-size: 40px;
+  color: #898AA6;
+  position: absolute;
+  top:10%;
+  left:50%;
+  padding: 10px;
+}
+.city-tag{
+  border-radius: 8px;
+  border: 1px solid #898AA6;
+  color: #898AA6;
+  background-color: #fafafa;
+  padding: 10px;
+  margin: 3px;
+  font-size: 18px;
+}
+.tag-list{
+  position: absolute;
+  top:38%;
+  left:13%;
+  width: 40%;
+}
+.search-item{
+  position: absolute;
+  top:30.5%;
+  left:55%;
+  width: 25%;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  padding: 10px;
+  margin: 3px;
+  font-size: 18px;
+  border: 1px solid #6E85B7;
+  z-index:99;
+}
