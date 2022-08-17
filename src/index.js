@@ -8,7 +8,7 @@ import Mutation from './Mutation.js';
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
 import FormikForm from './Form';
 import { useParams } from 'react-router';
-import { BrowserRouter, Route, Routes, Outlet } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Outlet, useSearchParams } from 'react-router-dom';
 
 
 const client = new ApolloClient({
@@ -65,20 +65,22 @@ function PageVariable(){
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Page1/>}/>
-      <Route path="/products" element={<Page2/>}>
-        <Route path="detail" element={<Page3/>}/>
-        <Route path="image" element={<Page4/>}/>
-        <Route path=":pageName/:pageId" element={<PageVariable/>}/>
-      </Route>
-      
-    </Routes>
-  </BrowserRouter>
-  //   <ApolloProvider client={client}>
-  //   <FormikForm/>
-  // </ApolloProvider>
+  <ApolloProvider client={client}>
+      <BrowserRouter>
+        <Routes>
+          
+          <Route path="/" element={<App/>}/>
+          <Route path="/formik" element={<FormikForm/>}/>
+          <Route path="/page1" element={<Page1/>}/>
+          <Route path="/products" element={<Page2/>}>
+            <Route path="detail" element={<Page3/>}/>
+            <Route path="image" element={<Page4/>}/>
+            <Route path=":pageName/:pageId" element={<PageVariable/>}/>
+          </Route>
+          
+        </Routes>
+      </BrowserRouter>
+  </ApolloProvider>
 );
 
 reportWebVitals();
